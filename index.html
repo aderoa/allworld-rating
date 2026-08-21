@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Global Rating</title>
+<style>
+:root{color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;padding:0;background:#fff;
+  font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,
+  sans-serif;color:#1a1a2e}
+.wrap{max-width:660px;margin:0 auto;padding:2px}
+h2{margin:0 0 8px;font-size:17px;letter-spacing:-.2px}
+.pick{margin:0 0 12px}
+select{font:inherit;font-size:13px;padding:4px 8px;border:1px solid #d8d9e3;
+  border-radius:8px;background:#fff;color:#1a1a2e;max-width:100%}
+section{display:none}
+section.on{display:block}
+table{border-collapse:collapse;width:100%;table-layout:fixed}
+col.c-rk{width:38px}
+col.c-fl{width:26px}
+col.c-pl{width:auto}
+col.c-cp{width:34%}
+col.c-rat{width:58px}
+col.c-gp{width:42px}
+col.c-num{width:50px}
+th,td{padding:5px 6px;border-bottom:1px solid #ecedf3;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:#6a6a80;
+  text-align:right;border-bottom:1px solid #d8d9e3}
+th.l,td.l{text-align:left}
+td{text-align:right;font-variant-numeric:tabular-nums}
+td.rk{color:#9a9ab0;font-size:12px;overflow:visible;text-overflow:clip}
+td.fl{width:1%;padding-right:0}
+td.fl img{display:block;width:19px;height:auto;border-radius:2px}
+/* The name wraps rather than truncates: it is the one thing a reader cannot
+   reconstruct from a fragment. */
+td.pl{font-weight:600;white-space:normal;overflow:visible;text-overflow:clip;
+  line-height:1.25}
+td.tm{color:#5a5a72;font-size:12px}
+td.rat{font-weight:700;color:#8a5a00}
+tr:nth-child(even) td{background:#fafafd}
+th[data-s]{cursor:pointer}
+th[data-s]:hover{color:#1a1a2e}
+th[aria-sort]{color:#8a5a00}
+th[aria-sort="descending"]::after{content:" ↓"}
+th[aria-sort="ascending"]::after{content:" ↑"}
+.none{color:#8a8aa0;font-size:12px;margin:4px 0 0}
+@media(max-width:560px){
+  th,td{padding:5px 2px;font-size:13px}
+  th{font-size:10px;letter-spacing:.2px}
+  col.c-rk{width:32px}
+  col.c-fl{width:22px}
+  col.c-cp{width:30%}
+  col.c-rat{width:48px}
+  col.c-gp{width:30px}
+  col.c-num{width:38px}
+}
+</style></head><body><div class="wrap">
+<h2>Global Rating</h2>
+<p class="pick"><select id="pick"><option value="allworld">All-World · outside the NBA</option>
+<option value="puerto-rican-bsn">Puerto Rican BSN</option>
+<option value="mexican-lnbp">Mexican LNBP</option>
+<option value="new-zealand-nbl">New Zealand NBL</option></select></p>
+<section id="allworld" class="on"><table><colgroup><col class="c-rk"><col class="c-fl"><col class="c-pl">
+<col class="c-cp"><col class="c-rat"><col class="c-gp"></colgroup>
+<thead><tr><th></th><th></th><th class="l" data-s="t">Player</th>
+<th class="l" data-s="t">Competitions</th>
+<th data-s="n">Rat</th><th data-s="n">GP</th></tr></thead><tbody><tr><td class="rk">1</td><td class="fl"><img src="https://flagcdn.com/w40/lt.png" alt="" loading="lazy"></td><td class="l pl">Jonas Valančiūnas</td><td class="l tm">NBA, EuroBasket +1</td><td class="rat">4.09</td><td>78</td></tr>
+<tr><td class="rk">2</td><td class="fl"><img src="https://flagcdn.com/w40/bg.png" alt="" loading="lazy"></td><td class="l pl">Sasha Vezenkov</td><td class="l tm">Euroleague, Greek HEBA A1</td><td class="rat">3.72</td><td>65</td></tr>
+<tr><td class="rk">3</td><td class="fl"><img src="https://flagcdn.com/w40/fr.png" alt="" loading="lazy"></td><td class="l pl">Guerschon Yabusele</td><td class="l tm">NBA, EuroBasket +1</td><td class="rat">3.64</td><td>75</td></tr>
+<tr><td class="rk">4</td><td class="fl"><img src="https://flagcdn.com/w40/do.png" alt="" loading="lazy"></td><td class="l pl">Jean Montero</td><td class="l tm">Euroleague, Spanish ACB +2</td><td class="rat">3.50</td><td>80</td></tr>
+<tr><td class="rk">5</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Tyrese Martin</td><td class="l tm">NBA, G League</td><td class="rat">3.44</td><td>49</td></tr>
+<tr><td class="rk">6</td><td class="fl"><img src="https://flagcdn.com/w40/pr.png" alt="" loading="lazy"></td><td class="l pl">Ethan Thompson</td><td class="l tm">NBA, G League +1</td><td class="rat">3.13</td><td>42</td></tr>
+<tr><td class="rk">7</td><td class="fl"><img src="https://flagcdn.com/w40/fr.png" alt="" loading="lazy"></td><td class="l pl">Timothe Luwawu-Cabarrot</td><td class="l tm">Euroleague, Spanish ACB +2</td><td class="rat">3.04</td><td>79</td></tr>
+<tr><td class="rk">8</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Mike James</td><td class="l tm">Euroleague, French Jeep Elite +1</td><td class="rat">2.98</td><td>58</td></tr>
+<tr><td class="rk">9</td><td class="fl"><img src="https://flagcdn.com/w40/fr.png" alt="" loading="lazy"></td><td class="l pl">Sylvain Francisco</td><td class="l tm">Euroleague, Lithuanian LKL +2</td><td class="rat">2.96</td><td>81</td></tr>
+<tr><td class="rk">10</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Elijah Bryant</td><td class="l tm">Euroleague, Israeli BSL</td><td class="rat">2.93</td><td>44</td></tr>
+<tr><td class="rk">11</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Cole Anthony</td><td class="l tm">NBA</td><td class="rat">2.93</td><td>35</td></tr>
+<tr><td class="rk">12</td><td class="fl"><img src="https://flagcdn.com/w40/ge.png" alt="" loading="lazy"></td><td class="l pl">Tornike Shengelia</td><td class="l tm">Spanish ACB, Euroleague +2</td><td class="rat">2.88</td><td>87</td></tr>
+<tr><td class="rk">13</td><td class="fl"><img src="https://flagcdn.com/w40/fr.png" alt="" loading="lazy"></td><td class="l pl">Elie Okobo</td><td class="l tm">Euroleague, French Jeep Elite +2</td><td class="rat">2.80</td><td>88</td></tr>
+<tr><td class="rk">14</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Kevin Punter</td><td class="l tm">Spanish ACB, Euroleague</td><td class="rat">2.79</td><td>81</td></tr>
+<tr><td class="rk">15</td><td class="fl"><img src="https://flagcdn.com/w40/ca.png" alt="" loading="lazy"></td><td class="l pl">Mfiondu Kabengele</td><td class="l tm">Euroleague, Adriatic League Liga ABA +2</td><td class="rat">2.77</td><td>74</td></tr>
+<tr><td class="rk">16</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Wade Baldwin IV</td><td class="l tm">Euroleague, Turkish BSL</td><td class="rat">2.76</td><td>72</td></tr>
+<tr><td class="rk">17</td><td class="fl"><img src="https://flagcdn.com/w40/gr.png" alt="" loading="lazy"></td><td class="l pl">Tyler Dorsey</td><td class="l tm">Euroleague, Greek HEBA A1 +1</td><td class="rat">2.76</td><td>76</td></tr>
+<tr><td class="rk">18</td><td class="fl"><img src="https://flagcdn.com/w40/fr.png" alt="" loading="lazy"></td><td class="l pl">Nadir Hifi</td><td class="l tm">French Jeep Elite, Euroleague +2</td><td class="rat">2.75</td><td>81</td></tr>
+<tr><td class="rk">19</td><td class="fl"><img src="https://flagcdn.com/w40/rs.png" alt="" loading="lazy"></td><td class="l pl">Nikola Milutinov</td><td class="l tm">Euroleague, Greek HEBA A1 +1</td><td class="rat">2.75</td><td>70</td></tr>
+<tr><td class="rk">20</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Aaron Holiday</td><td class="l tm">NBA</td><td class="rat">2.75</td><td>63</td></tr>
+<tr><td class="rk">21</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Kendrick Nunn</td><td class="l tm">Euroleague, Greek HEBA A1</td><td class="rat">2.73</td><td>58</td></tr>
+<tr><td class="rk">22</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Daniel Oturu</td><td class="l tm">Euroleague, Israeli BSL</td><td class="rat">2.67</td><td>50</td></tr>
+<tr><td class="rk">23</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Bryce Cotton</td><td class="l tm">Australian NBL, Asian World Cup Qualifier</td><td class="rat">2.66</td><td>42</td></tr>
+<tr><td class="rk">24</td><td class="fl"><img src="https://flagcdn.com/w40/cv.png" alt="" loading="lazy"></td><td class="l pl">Edy Tavares</td><td class="l tm">Euroleague, Spanish ACB +1</td><td class="rat">2.66</td><td>61</td></tr>
+<tr><td class="rk">25</td><td class="fl"><img src="https://flagcdn.com/w40/ar.png" alt="" loading="lazy"></td><td class="l pl">Facundo Campazzo</td><td class="l tm">Euroleague, Spanish ACB +1</td><td class="rat">2.65</td><td>80</td></tr>
+<tr><td class="rk">26</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Talen Horton-Tucker</td><td class="l tm">Euroleague, Turkish BSL</td><td class="rat">2.64</td><td>72</td></tr>
+<tr><td class="rk">27</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Kameron Taylor</td><td class="l tm">Euroleague, Spanish ACB</td><td class="rat">2.62</td><td>74</td></tr>
+<tr><td class="rk">28</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Will Clyburn</td><td class="l tm">Euroleague, Spanish ACB</td><td class="rat">2.56</td><td>64</td></tr>
+<tr><td class="rk">29</td><td class="fl"><img src="https://flagcdn.com/w40/ng.png" alt="" loading="lazy"></td><td class="l pl">Chima Moneke</td><td class="l tm">Euroleague, Adriatic League Liga ABA</td><td class="rat">2.56</td><td>54</td></tr>
+<tr><td class="rk">30</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Terquavion Smith</td><td class="l tm">Chinese CBA, Canadian Elite Basketball League</td><td class="rat">2.56</td><td>52</td></tr></tbody></table></section>
+<section id="puerto-rican-bsn" class=""><table><colgroup><col class="c-rk"><col class="c-fl"><col class="c-pl">
+<col class="c-cp"><col class="c-rat"><col class="c-gp"><col class="c-num">
+<col class="c-num"><col class="c-num"></colgroup>
+<thead><tr><th></th><th></th><th class="l" data-s="t">Player</th>
+<th class="l" data-s="t">Team</th>
+<th data-s="n">Rat</th><th data-s="n">GP</th><th data-s="n">Pts</th>
+<th data-s="n">Reb</th><th data-s="n">Ast</th></tr></thead><tbody><tr><td class="rk">1</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Travis Trice</td><td class="l tm">Criollos de Caguas</td><td class="rat">23.53</td><td>44</td><td>19.3</td><td>3.5</td><td>9.5</td></tr>
+<tr><td class="rk">2</td><td class="fl"><img src="https://flagcdn.com/w40/do.png" alt="" loading="lazy"></td><td class="l pl">Rigoberto Mendoza</td><td class="l tm">Santeros de Aguada</td><td class="rat">21.13</td><td>47</td><td>17.7</td><td>6.2</td><td>5.0</td></tr>
+<tr><td class="rk">3</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Moses Brown</td><td class="l tm">Criollos de Caguas</td><td class="rat">17.71</td><td>42</td><td>17.9</td><td>10.2</td><td>0.6</td></tr>
+<tr><td class="rk">4</td><td class="fl"><img src="https://flagcdn.com/w40/pr.png" alt="" loading="lazy"></td><td class="l pl">Jezreel De Jesus</td><td class="l tm">Leones de Ponce</td><td class="rat">16.35</td><td>38</td><td>19.9</td><td>3.1</td><td>4.1</td></tr>
+<tr><td class="rk">5</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Louis King</td><td class="l tm">Criollos de Caguas</td><td class="rat">14.76</td><td>43</td><td>15.8</td><td>6.5</td><td>3.9</td></tr>
+<tr><td class="rk">6</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Jalen Crutcher</td><td class="l tm">Leones de Ponce</td><td class="rat">14.29</td><td>37</td><td>15.8</td><td>3.7</td><td>6.3</td></tr>
+<tr><td class="rk">7</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Jaylen Nowell</td><td class="l tm">Gigantes de Carolina</td><td class="rat">13.60</td><td>34</td><td>21.4</td><td>3.1</td><td>3.5</td></tr>
+<tr><td class="rk">8</td><td class="fl"><img src="https://flagcdn.com/w40/pr.png" alt="" loading="lazy"></td><td class="l pl">Gary Browne</td><td class="l tm">Vaqueros de Bayamon</td><td class="rat">13.46</td><td>43</td><td>10.2</td><td>4.2</td><td>6.6</td></tr>
+<tr><td class="rk">9</td><td class="fl"><img src="https://flagcdn.com/w40/pr.png" alt="" loading="lazy"></td><td class="l pl">Andre Curbelo</td><td class="l tm">Atleticos de San German</td><td class="rat">13.07</td><td>31</td><td>16.6</td><td>6.6</td><td>6.1</td></tr>
+<tr><td class="rk">10</td><td class="fl"><img src="https://flagcdn.com/w40/mk.png" alt="" loading="lazy"></td><td class="l pl">Jake Wiley</td><td class="l tm">Santeros de Aguada</td><td class="rat">13.01</td><td>39</td><td>12.8</td><td>6.6</td><td>2.7</td></tr>
+<tr><td class="rk">11</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Montrezl Harrell</td><td class="l tm">Atleticos de San German</td><td class="rat">12.86</td><td>27</td><td>17.1</td><td>9.9</td><td>2.8</td></tr>
+<tr><td class="rk">12</td><td class="fl"><img src="https://flagcdn.com/w40/pr.png" alt="" loading="lazy"></td><td class="l pl">Ivan Gandia-Rosa</td><td class="l tm">Santeros de Aguada</td><td class="rat">12.37</td><td>47</td><td>11.4</td><td>2.2</td><td>3.8</td></tr>
+<tr><td class="rk">13</td><td class="fl"><img src="https://flagcdn.com/w40/pr.png" alt="" loading="lazy"></td><td class="l pl">Ismael Romero</td><td class="l tm">Mets de Guaynabo</td><td class="rat">12.20</td><td>31</td><td>17.5</td><td>8.3</td><td>2.8</td></tr>
+<tr><td class="rk">14</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Thomas Robinson</td><td class="l tm">Leones de Ponce</td><td class="rat">12.12</td><td>36</td><td>14.2</td><td>8.8</td><td>1.6</td></tr>
+<tr><td class="rk">15</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Nick Perkins</td><td class="l tm">Atleticos de San German</td><td class="rat">10.99</td><td>37</td><td>15.5</td><td>5.8</td><td>1.9</td></tr>
+<tr><td class="rk">16</td><td class="fl"><img src="https://flagcdn.com/w40/pr.png" alt="" loading="lazy"></td><td class="l pl">Angel Rodriguez</td><td class="l tm">Cangrejeros de Santurce</td><td class="rat">10.69</td><td>34</td><td>12.6</td><td>3.7</td><td>6.5</td></tr>
+<tr><td class="rk">17</td><td class="fl"><img src="https://flagcdn.com/w40/pr.png" alt="" loading="lazy"></td><td class="l pl">Tremont Waters</td><td class="l tm">Gigantes de Carolina</td><td class="rat">10.65</td><td>32</td><td>16.6</td><td>2.7</td><td>6.7</td></tr>
+<tr><td class="rk">18</td><td class="fl"><img src="https://flagcdn.com/w40/do.png" alt="" loading="lazy"></td><td class="l pl">Jassel Perez</td><td class="l tm">Vaqueros de Bayamon</td><td class="rat">10.37</td><td>24</td><td>18.9</td><td>4.9</td><td>4.0</td></tr>
+<tr><td class="rk">19</td><td class="fl"><img src="https://flagcdn.com/w40/pr.png" alt="" loading="lazy"></td><td class="l pl">Jaysean Paige</td><td class="l tm">Mets de Guaynabo</td><td class="rat">10.28</td><td>31</td><td>16.7</td><td>3.4</td><td>4.2</td></tr>
+<tr><td class="rk">20</td><td class="fl"><img src="https://flagcdn.com/w40/pr.png" alt="" loading="lazy"></td><td class="l pl">Javier Mojica</td><td class="l tm">Vaqueros de Bayamon</td><td class="rat">10.12</td><td>46</td><td>10.2</td><td>2.5</td><td>2.5</td></tr>
+<tr><td class="rk">21</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Kristian Doolittle</td><td class="l tm">Osos de Manati</td><td class="rat">9.96</td><td>27</td><td>16.5</td><td>7.7</td><td>3.8</td></tr>
+<tr><td class="rk">22</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Derrick Walton, Jr.</td><td class="l tm">Capitanes de Arecibo</td><td class="rat">9.71</td><td>28</td><td>12.8</td><td>3.9</td><td>8.7</td></tr>
+<tr><td class="rk">23</td><td class="fl"><img src="https://flagcdn.com/w40/br.png" alt="" loading="lazy"></td><td class="l pl">Timothy Soares</td><td class="l tm">Capitanes de Arecibo</td><td class="rat">9.68</td><td>28</td><td>17.0</td><td>7.9</td><td>2.3</td></tr>
+<tr><td class="rk">24</td><td class="fl"><img src="https://flagcdn.com/w40/cd.png" alt="" loading="lazy"></td><td class="l pl">Emmanuel Mudiay</td><td class="l tm">Piratas de Quebradillas</td><td class="rat">9.65</td><td>27</td><td>19.6</td><td>4.2</td><td>5.6</td></tr>
+<tr><td class="rk">25</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Davon Jefferson</td><td class="l tm">Cangrejeros de Santurce</td><td class="rat">9.45</td><td>28</td><td>12.0</td><td>8.1</td><td>1.9</td></tr>
+<tr><td class="rk">26</td><td class="fl"><img src="https://flagcdn.com/w40/pr.png" alt="" loading="lazy"></td><td class="l pl">Christian Lopez</td><td class="l tm">Criollos de Caguas</td><td class="rat">9.28</td><td>38</td><td>12.2</td><td>2.7</td><td>1.8</td></tr>
+<tr><td class="rk">27</td><td class="fl"><img src="https://flagcdn.com/w40/nz.png" alt="" loading="lazy"></td><td class="l pl">Tyrell Harrison</td><td class="l tm">Indios de Mayaguez</td><td class="rat">9.13</td><td>21</td><td>18.5</td><td>9.4</td><td>1.2</td></tr>
+<tr><td class="rk">28</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Jameer Nelson, Jr.</td><td class="l tm">Osos de Manati</td><td class="rat">9.02</td><td>22</td><td>19.2</td><td>3.5</td><td>4.0</td></tr>
+<tr><td class="rk">29</td><td class="fl"><img src="https://flagcdn.com/w40/pr.png" alt="" loading="lazy"></td><td class="l pl">Renaldo Balkman</td><td class="l tm">Vaqueros de Bayamon</td><td class="rat">8.76</td><td>45</td><td>6.2</td><td>4.3</td><td>1.3</td></tr>
+<tr><td class="rk">30</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Damian Jones</td><td class="l tm">Vaqueros de Bayamon</td><td class="rat">8.69</td><td>21</td><td>14.3</td><td>6.5</td><td>1.5</td></tr></tbody></table></section>
+<section id="mexican-lnbp" class=""><table><colgroup><col class="c-rk"><col class="c-fl"><col class="c-pl">
+<col class="c-cp"><col class="c-rat"><col class="c-gp"><col class="c-num">
+<col class="c-num"><col class="c-num"></colgroup>
+<thead><tr><th></th><th></th><th class="l" data-s="t">Player</th>
+<th class="l" data-s="t">Team</th>
+<th data-s="n">Rat</th><th data-s="n">GP</th><th data-s="n">Pts</th>
+<th data-s="n">Reb</th><th data-s="n">Ast</th></tr></thead><tbody><tr><td class="rk">1</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Avry Holmes</td><td class="l tm">Fuerza Regia</td><td class="rat">18.52</td><td>30</td><td>15.1</td><td>3.3</td><td>4.7</td></tr>
+<tr><td class="rk">2</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Scott Bamforth</td><td class="l tm">Fuerza Regia</td><td class="rat">16.26</td><td>23</td><td>17.7</td><td>4.4</td><td>3.3</td></tr>
+<tr><td class="rk">3</td><td class="fl"><img src="https://flagcdn.com/w40/ve.png" alt="" loading="lazy"></td><td class="l pl">Michael Carrera</td><td class="l tm">Diablos Rojos</td><td class="rat">14.31</td><td>28</td><td>15.2</td><td>5.2</td><td>2.1</td></tr>
+<tr><td class="rk">4</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Erik Thomas</td><td class="l tm">Soles</td><td class="rat">12.93</td><td>28</td><td>12.4</td><td>6.8</td><td>2.7</td></tr>
+<tr><td class="rk">5</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Daishon Smith</td><td class="l tm">Mineros de Zacatecas</td><td class="rat">12.66</td><td>29</td><td>11.9</td><td>2.3</td><td>3.8</td></tr>
+<tr><td class="rk">6</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Michael Martin</td><td class="l tm">Panteras de Aguascalientes</td><td class="rat">11.62</td><td>27</td><td>12.4</td><td>3.1</td><td>5.2</td></tr>
+<tr><td class="rk">7</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Joshua Ibarra</td><td class="l tm">Fuerza Regia</td><td class="rat">11.28</td><td>18</td><td>12.2</td><td>11.2</td><td>1.2</td></tr>
+<tr><td class="rk">8</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Connor Zinaich</td><td class="l tm">Soles</td><td class="rat">10.77</td><td>20</td><td>12.4</td><td>6.5</td><td>1.2</td></tr>
+<tr><td class="rk">9</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">A.J. Banks</td><td class="l tm">Abejas</td><td class="rat">9.81</td><td>22</td><td>11.0</td><td>2.8</td><td>3.8</td></tr>
+<tr><td class="rk">10</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Joshua Webster</td><td class="l tm">Soles</td><td class="rat">9.29</td><td>20</td><td>9.9</td><td>3.5</td><td>5.8</td></tr>
+<tr><td class="rk">11</td><td class="fl"><img src="https://flagcdn.com/w40/mx.png" alt="" loading="lazy"></td><td class="l pl">J.J. Avila</td><td class="l tm">Dorados de Chihuahua</td><td class="rat">9.26</td><td>19</td><td>10.0</td><td>8.5</td><td>4.1</td></tr>
+<tr><td class="rk">12</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Wayne Langston</td><td class="l tm">Fuerza Regia</td><td class="rat">8.89</td><td>30</td><td>7.5</td><td>3.2</td><td>2.0</td></tr>
+<tr><td class="rk">13</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Lewis Sullivan</td><td class="l tm">Fuerza Regia</td><td class="rat">8.51</td><td>19</td><td>11.3</td><td>5.3</td><td>1.9</td></tr>
+<tr><td class="rk">14</td><td class="fl"><img src="https://flagcdn.com/w40/ar.png" alt="" loading="lazy"></td><td class="l pl">Joaquin Valinotti</td><td class="l tm">Mineros de Zacatecas</td><td class="rat">8.19</td><td>21</td><td>10.6</td><td>3.1</td><td>4.7</td></tr>
+<tr><td class="rk">15</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Romeao Ferguson</td><td class="l tm">Mineros de Zacatecas</td><td class="rat">8.09</td><td>20</td><td>12.7</td><td>4.5</td><td>3.5</td></tr>
+<tr><td class="rk">16</td><td class="fl"><img src="https://flagcdn.com/w40/sn.png" alt="" loading="lazy"></td><td class="l pl">Malik Dime</td><td class="l tm">Diablos Rojos</td><td class="rat">7.91</td><td>21</td><td>7.1</td><td>5.1</td><td>0.6</td></tr>
+<tr><td class="rk">17</td><td class="fl"><img src="https://flagcdn.com/w40/do.png" alt="" loading="lazy"></td><td class="l pl">Rigoberto Mendoza</td><td class="l tm">Astros de Jalisco</td><td class="rat">7.84</td><td>14</td><td>13.9</td><td>7.1</td><td>2.4</td></tr>
+<tr><td class="rk">18</td><td class="fl"><img src="https://flagcdn.com/w40/sn.png" alt="" loading="lazy"></td><td class="l pl">Mus Barro</td><td class="l tm">Panteras de Aguascalientes</td><td class="rat">7.78</td><td>17</td><td>12.4</td><td>8.2</td><td>0.6</td></tr>
+<tr><td class="rk">19</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Chavaughn Lewis</td><td class="l tm">Astros de Jalisco</td><td class="rat">7.51</td><td>13</td><td>16.0</td><td>3.6</td><td>1.8</td></tr>
+<tr><td class="rk">20</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">D.J. Cooper</td><td class="l tm">Astros de Jalisco</td><td class="rat">7.38</td><td>18</td><td>7.4</td><td>3.2</td><td>6.9</td></tr>
+<tr><td class="rk">21</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Michael Smith</td><td class="l tm">Diablos Rojos</td><td class="rat">7.30</td><td>21</td><td>11.5</td><td>2.4</td><td>2.8</td></tr>
+<tr><td class="rk">22</td><td class="fl"><img src="https://flagcdn.com/w40/bs.png" alt="" loading="lazy"></td><td class="l pl">Tavario Miller</td><td class="l tm">Mineros de Zacatecas</td><td class="rat">6.79</td><td>19</td><td>9.8</td><td>5.9</td><td>1.1</td></tr>
+<tr><td class="rk">23</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Brandon Paul</td><td class="l tm">Fuerza Regia</td><td class="rat">6.52</td><td>19</td><td>11.2</td><td>1.7</td><td>2.5</td></tr>
+<tr><td class="rk">24</td><td class="fl"><img src="https://flagcdn.com/w40/mx.png" alt="" loading="lazy"></td><td class="l pl">Gabriel Giron</td><td class="l tm">Panteras de Aguascalientes</td><td class="rat">6.42</td><td>20</td><td>10.1</td><td>3.1</td><td>2.1</td></tr>
+<tr><td class="rk">25</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Gage Davis</td><td class="l tm">Astros de Jalisco</td><td class="rat">6.41</td><td>12</td><td>11.8</td><td>5.4</td><td>1.4</td></tr>
+<tr><td class="rk">26</td><td class="fl"><img src="https://flagcdn.com/w40/mx.png" alt="" loading="lazy"></td><td class="l pl">Gael Bonilla</td><td class="l tm">Diablos Rojos</td><td class="rat">6.36</td><td>20</td><td>7.0</td><td>4.2</td><td>1.4</td></tr>
+<tr><td class="rk">27</td><td class="fl"><img src="https://flagcdn.com/w40/br.png" alt="" loading="lazy"></td><td class="l pl">Lucas Robinson</td><td class="l tm">Mineros de Zacatecas</td><td class="rat">6.02</td><td>17</td><td>6.7</td><td>5.8</td><td>2.0</td></tr>
+<tr><td class="rk">28</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Tyrone White</td><td class="l tm">Panteras de Aguascalientes</td><td class="rat">5.68</td><td>17</td><td>12.4</td><td>2.5</td><td>1.0</td></tr>
+<tr><td class="rk">29</td><td class="fl"><img src="https://flagcdn.com/w40/ve.png" alt="" loading="lazy"></td><td class="l pl">Franger Pirela</td><td class="l tm">Freseros Irapuato</td><td class="rat">5.66</td><td>10</td><td>20.6</td><td>5.1</td><td>6.5</td></tr>
+<tr><td class="rk">30</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Jimond Ivey</td><td class="l tm">Fuerza Regia</td><td class="rat">5.64</td><td>14</td><td>11.7</td><td>4.1</td><td>3.1</td></tr></tbody></table></section>
+<section id="new-zealand-nbl" class=""><table><colgroup><col class="c-rk"><col class="c-fl"><col class="c-pl">
+<col class="c-cp"><col class="c-rat"><col class="c-gp"><col class="c-num">
+<col class="c-num"><col class="c-num"></colgroup>
+<thead><tr><th></th><th></th><th class="l" data-s="t">Player</th>
+<th class="l" data-s="t">Team</th>
+<th data-s="n">Rat</th><th data-s="n">GP</th><th data-s="n">Pts</th>
+<th data-s="n">Reb</th><th data-s="n">Ast</th></tr></thead><tbody><tr><td class="rk">1</td><td class="fl"><img src="https://flagcdn.com/w40/au.png" alt="" loading="lazy"></td><td class="l pl">Elijah Pepper</td><td class="l tm">Wellington Saints</td><td class="rat">28.47</td><td>21</td><td>29.2</td><td>5.5</td><td>4.8</td></tr>
+<tr><td class="rk">2</td><td class="fl"><img src="https://flagcdn.com/w40/nz.png" alt="" loading="lazy"></td><td class="l pl">Sam Timmins</td><td class="l tm">Zerofees Southland Sharks</td><td class="rat">21.34</td><td>21</td><td>18.8</td><td>11.3</td><td>3.6</td></tr>
+<tr><td class="rk">3</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Caleb Asberry</td><td class="l tm">Zerofees Southland Sharks</td><td class="rat">20.50</td><td>21</td><td>20.7</td><td>4.1</td><td>4.7</td></tr>
+<tr><td class="rk">4</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Rylan Jones</td><td class="l tm">Zerofees Southland Sharks</td><td class="rat">20.26</td><td>20</td><td>15.8</td><td>6.2</td><td>6.9</td></tr>
+<tr><td class="rk">5</td><td class="fl"><img src="https://flagcdn.com/w40/ke.png" alt="" loading="lazy"></td><td class="l pl">Akech Aliir</td><td class="l tm">Wellington Saints</td><td class="rat">20.25</td><td>23</td><td>16.6</td><td>6.5</td><td>1.8</td></tr>
+<tr><td class="rk">6</td><td class="fl"><img src="https://flagcdn.com/w40/nz.png" alt="" loading="lazy"></td><td class="l pl">Jack Andrew</td><td class="l tm">Canterbury Rams</td><td class="rat">19.92</td><td>21</td><td>16.1</td><td>9.2</td><td>1.3</td></tr>
+<tr><td class="rk">7</td><td class="fl"><img src="https://flagcdn.com/w40/nz.png" alt="" loading="lazy"></td><td class="l pl">Carlin Davison</td><td class="l tm">Wellington Saints</td><td class="rat">17.64</td><td>22</td><td>14.0</td><td>7.0</td><td>7.4</td></tr>
+<tr><td class="rk">8</td><td class="fl"><img src="https://flagcdn.com/w40/nz.png" alt="" loading="lazy"></td><td class="l pl">Walter Brown</td><td class="l tm">Canterbury Rams</td><td class="rat">17.30</td><td>19</td><td>18.4</td><td>6.6</td><td>4.3</td></tr>
+<tr><td class="rk">9</td><td class="fl"><img src="https://flagcdn.com/w40/nz.png" alt="" loading="lazy"></td><td class="l pl">Robert Loe</td><td class="l tm">Aukland Tuatara</td><td class="rat">17.05</td><td>20</td><td>13.4</td><td>9.2</td><td>5.2</td></tr>
+<tr><td class="rk">10</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Carter Whitt</td><td class="l tm">Franklin Bulls</td><td class="rat">15.59</td><td>20</td><td>16.2</td><td>4.0</td><td>9.4</td></tr>
+<tr><td class="rk">11</td><td class="fl"><img src="https://flagcdn.com/w40/nz.png" alt="" loading="lazy"></td><td class="l pl">Reuben Te Rangi</td><td class="l tm">Whai</td><td class="rat">15.29</td><td>17</td><td>22.4</td><td>5.8</td><td>3.3</td></tr>
+<tr><td class="rk">12</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Keylan Boone</td><td class="l tm">Zerofees Southland Sharks</td><td class="rat">14.97</td><td>19</td><td>17.5</td><td>7.6</td><td>1.0</td></tr>
+<tr><td class="rk">13</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Jace Carter</td><td class="l tm">Franklin Bulls</td><td class="rat">14.87</td><td>20</td><td>19.5</td><td>11.0</td><td>2.5</td></tr>
+<tr><td class="rk">14</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Jamal Poplar</td><td class="l tm">Manawatu Jets</td><td class="rat">14.68</td><td>19</td><td>21.5</td><td>10.9</td><td>2.2</td></tr>
+<tr><td class="rk">15</td><td class="fl"><img src="https://flagcdn.com/w40/nz.png" alt="" loading="lazy"></td><td class="l pl">Zach Riley</td><td class="l tm">Aukland Tuatara</td><td class="rat">14.40</td><td>21</td><td>14.0</td><td>5.0</td><td>3.5</td></tr>
+<tr><td class="rk">16</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Donte Ingram</td><td class="l tm">Wellington Saints</td><td class="rat">14.23</td><td>23</td><td>14.0</td><td>4.6</td><td>2.4</td></tr>
+<tr><td class="rk">17</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Josh Dilling</td><td class="l tm">Aukland Tuatara</td><td class="rat">14.15</td><td>21</td><td>13.8</td><td>2.4</td><td>5.3</td></tr>
+<tr><td class="rk">18</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Kaden Sand</td><td class="l tm">Manawatu Jets</td><td class="rat">14.12</td><td>19</td><td>17.9</td><td>5.1</td><td>3.1</td></tr>
+<tr><td class="rk">19</td><td class="fl"><img src="https://flagcdn.com/w40/cm.png" alt="" loading="lazy"></td><td class="l pl">Tamenang Choh</td><td class="l tm">Canterbury Rams</td><td class="rat">14.00</td><td>15</td><td>19.7</td><td>8.1</td><td>5.8</td></tr>
+<tr><td class="rk">20</td><td class="fl"><img src="https://flagcdn.com/w40/nz.png" alt="" loading="lazy"></td><td class="l pl">Taylor Britt</td><td class="l tm">Canterbury Rams</td><td class="rat">13.93</td><td>15</td><td>20.1</td><td>3.7</td><td>7.0</td></tr>
+<tr><td class="rk">21</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Derrin Boyd</td><td class="l tm">Franklin Bulls</td><td class="rat">13.75</td><td>20</td><td>20.3</td><td>5.2</td><td>3.2</td></tr>
+<tr><td class="rk">22</td><td class="fl"><img src="https://flagcdn.com/w40/nz.png" alt="" loading="lazy"></td><td class="l pl">Brayden Inger</td><td class="l tm">Zerofees Southland Sharks</td><td class="rat">13.68</td><td>20</td><td>12.9</td><td>5.2</td><td>1.9</td></tr>
+<tr><td class="rk">23</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Buay Tuach</td><td class="l tm">Otago Nuggets</td><td class="rat">13.44</td><td>21</td><td>15.5</td><td>5.5</td><td>2.2</td></tr>
+<tr><td class="rk">24</td><td class="fl"><img src="https://flagcdn.com/w40/nz.png" alt="" loading="lazy"></td><td class="l pl">Tom Vodanovich</td><td class="l tm">Aukland Tuatara</td><td class="rat">13.32</td><td>21</td><td>14.8</td><td>6.1</td><td>1.9</td></tr>
+<tr><td class="rk">25</td><td class="fl"><img src="https://flagcdn.com/w40/nz.png" alt="" loading="lazy"></td><td class="l pl">Jordan Hunt</td><td class="l tm">Wellington Saints</td><td class="rat">13.12</td><td>22</td><td>10.8</td><td>5.8</td><td>1.9</td></tr>
+<tr><td class="rk">26</td><td class="fl"><img src="https://flagcdn.com/w40/nz.png" alt="" loading="lazy"></td><td class="l pl">Ethan Rusbatch</td><td class="l tm">Otago Nuggets</td><td class="rat">12.70</td><td>20</td><td>17.4</td><td>4.8</td><td>2.8</td></tr>
+<tr><td class="rk">27</td><td class="fl"><img src="https://flagcdn.com/w40/nz.png" alt="" loading="lazy"></td><td class="l pl">Taine Murray</td><td class="l tm">Whai</td><td class="rat">12.68</td><td>18</td><td>20.2</td><td>5.0</td><td>2.5</td></tr>
+<tr><td class="rk">28</td><td class="fl"><img src="https://flagcdn.com/w40/nz.png" alt="" loading="lazy"></td><td class="l pl">Kruz Perrott-Hunt</td><td class="l tm">Nelson Giants</td><td class="rat">11.64</td><td>18</td><td>20.2</td><td>5.9</td><td>4.2</td></tr>
+<tr><td class="rk">29</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Isiah Small</td><td class="l tm">Manawatu Jets</td><td class="rat">11.45</td><td>13</td><td>16.0</td><td>8.9</td><td>3.3</td></tr>
+<tr><td class="rk">30</td><td class="fl"><img src="https://flagcdn.com/w40/us.png" alt="" loading="lazy"></td><td class="l pl">Alain Louis</td><td class="l tm">Otago Nuggets</td><td class="rat">10.87</td><td>21</td><td>10.7</td><td>2.9</td><td>6.5</td></tr></tbody></table></section>
+</div>
+<script>
+(function(){
+  var sel = document.getElementById("pick");
+  var secs = [].slice.call(document.querySelectorAll("section"));
+  if(sel){
+    sel.addEventListener("change", function(){
+      secs.forEach(function(s){
+        s.className = (s.id === sel.value) ? "on" : "";
+      });
+    });
+  }
+  // Sorting, per table, so one view's order does not follow the reader into
+  // another. Rows are reordered in place; nothing is fetched and no table
+  // changes height.
+  [].slice.call(document.querySelectorAll("table")).forEach(function(tbl){
+    var tb = tbl.querySelector("tbody");
+    if(!tb) return;
+    var all = [].slice.call(tb.querySelectorAll("tr"));
+    var key = -1, desc = true;
+    var ths = [].slice.call(tbl.querySelectorAll("thead th"));
+    ths.forEach(function(th, i){
+      if(!th.getAttribute("data-s")) return;
+      th.addEventListener("click", function(){
+        if(key === i) desc = !desc; else { key = i; desc = true; }
+        var numeric = th.getAttribute("data-s") === "n";
+        all.sort(function(a, b){
+          var x = a.cells[i].textContent.trim(), y = b.cells[i].textContent.trim();
+          if(numeric){
+            var nx = parseFloat(x) || 0, ny = parseFloat(y) || 0;
+            return desc ? ny - nx : nx - ny;
+          }
+          return desc ? y.localeCompare(x) : x.localeCompare(y);
+        });
+        ths.forEach(function(o){ o.removeAttribute("aria-sort"); });
+        th.setAttribute("aria-sort", desc ? "descending" : "ascending");
+        tb.innerHTML = "";
+        all.forEach(function(r, n){
+          r.cells[0].textContent = n + 1;
+          tb.appendChild(r);
+        });
+      });
+    });
+  });
+})();
+</script>
+</body></html>
