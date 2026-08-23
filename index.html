@@ -39,8 +39,10 @@ td.pl{font-weight:600;white-space:normal;overflow:visible;text-overflow:clip;
   line-height:1.25}
 td.tm{color:#5a5a72;font-size:12px}
 td.rat{font-weight:700;color:#8a5a00}
+/* Left, with its header: the age sits beside the name and reads as part of it,
+   and a right-aligned header over a left-aligned column looks like a mistake. */
 td.age{color:#5a5a72;font-size:12px;font-variant-numeric:tabular-nums;
-  text-align:right}
+  text-align:left}
 /* The hover is the only place the full breakdown lives, so the cell says it is
    there rather than leaving a reader to discover it. */
 td.tm[title]{cursor:help;text-decoration:underline dotted #c8c8d8}
@@ -71,7 +73,7 @@ th[aria-sort="ascending"]::after{content:" ↑"}
 <section id="allworld" class="on"><table><colgroup><col class="c-rk"><col class="c-fl"><col class="c-pl">
 <col class="c-age"><col class="c-cp"><col class="c-rat"><col class="c-gp"></colgroup>
 <thead><tr><th></th><th></th><th class="l" data-s="t">Player</th>
-<th data-s="t">Age</th>
+<th class="l" data-s="t">Age</th>
 <th class="l" data-s="t">Competitions</th>
 <th data-s="n">Rat</th><th data-s="n">GP</th></tr></thead><tbody><tr><td class="rk">1</td><td class="fl"><img src="https://flagcdn.com/w40/lt.png" alt="" loading="lazy"></td><td class="l pl">Jonas Valanciunas</td><td class="age">34-109</td><td class="l tm" title="NBA: 69; EuroBasket: 7; European World Cup Qualifier: 2">NBA, EuroBasket +1</td><td class="rat">4.01</td><td>78</td></tr>
 <tr><td class="rk">2</td><td class="fl"><img src="https://flagcdn.com/w40/bg.png" alt="" loading="lazy"></td><td class="l pl">Sasha Vezenkov</td><td class="age">31-017</td><td class="l tm" title="Euroleague: 39; Greek HEBA A1: 26">Euroleague, Greek HEBA A1</td><td class="rat">3.65</td><td>65</td></tr>
@@ -106,7 +108,7 @@ th[aria-sort="ascending"]::after{content:" ↑"}
 <section id="euroleague" class=""><table><colgroup><col class="c-rk"><col class="c-fl"><col class="c-pl">
 <col class="c-age"><col class="c-cp"><col class="c-rat"><col class="c-gp"></colgroup>
 <thead><tr><th></th><th></th><th class="l" data-s="t">Player</th>
-<th data-s="t">Age</th>
+<th class="l" data-s="t">Age</th>
 <th class="l" data-s="t">Team</th>
 <th data-s="n">Rat</th><th data-s="n">GP</th></tr></thead><tbody><tr><td class="rk">1</td><td class="fl"><img src="https://flagcdn.com/w40/lt.png" alt="" loading="lazy"></td><td class="l pl">Jonas Valanciunas</td><td class="age">34-109</td><td class="l tm" title="NBA: 69; EuroBasket: 7; European World Cup Qualifier: 2">Zalgiris Kaunas</td><td class="rat">4.01</td><td>78</td></tr>
 <tr><td class="rk">2</td><td class="fl"><img src="https://flagcdn.com/w40/bg.png" alt="" loading="lazy"></td><td class="l pl">Sasha Vezenkov</td><td class="age">31-017</td><td class="l tm" title="Euroleague: 39; Greek HEBA A1: 26">Olympiacos</td><td class="rat">3.65</td><td>65</td></tr>
