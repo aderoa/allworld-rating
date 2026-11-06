@@ -38,18 +38,16 @@ td.fl img{display:block;width:19px;height:auto;border-radius:2px}
 /* The name wraps rather than truncates: it is the one thing a reader cannot
    reconstruct from a fragment. */
 td.pl{font-weight:600}
-/* v1.31.1: the team wraps instead of the name. */
+/* v1.31.2: the team wraps instead of the name. */
 td.tm{color:#5a5a72;font-size:12px;white-space:normal;line-height:1.25}
-/* Room for the name: a wider page, a narrower team column. */
-.wrap{max-width:780px}
-col.c-cp{width:20%}
-col.c-age{width:44px}
-col.c-rat{width:50px}
-col.c-gp{width:36px}
-/* A phone scrolls the table sideways rather than squeezing the name out. */
+/* COLUMNS SIZED BY WHAT IS IN THEM (v1.31.2): the name column as wide as the
+   longest name in this list, the team column whatever is left. */
+table{table-layout:auto}
+col.c-pl,col.c-cp{width:auto}
+td.pl,td.age,td.rat,td.st{overflow:visible;text-overflow:clip}
+td.tm{min-width:90px}
 @media(max-width:600px){
   section.on{overflow-x:auto;-webkit-overflow-scrolling:touch}
-  section.on table{min-width:600px}
 }
 td.rat{font-weight:700;color:#8a5a00}
 /* Left, with its header: the age sits beside the name and reads as part of it,
